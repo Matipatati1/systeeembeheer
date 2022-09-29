@@ -1,1 +1,15 @@
-LANG="C"
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+export LC_CTYPE="en_US.UTF-8"
+export LC_NUMERIC=nl_BE.UTF-8
+export LC_TIME=nl_BE.UTF-8
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY=nl_BE.UTF-8
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER=nl_BE.UTF-8
+export LC_NAME=nl_BE.UTF-8
+export LC_ADDRESS=nl_BE.UTF-8
+export LC_TELEPHONE=nl_BE.UTF-8
+export LC_MEASUREMENT=nl_BE.UTF-8
+export LC_IDENTIFICATION=nl_BE.UTF-8
+LC_ALL=
