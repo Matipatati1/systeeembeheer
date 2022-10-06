@@ -1,4 +1,4 @@
-root:!*:19106:0:99999:7:::
+root:$6$0gs0NQMX$1yopFcLi7RQtEmGXB0TR/ksH.2BrhGhGgtktqP9BuRJo6ksp5d.ftnWzSRUf0CDq2B0lvtspadSE681zWwHzL0:19255:0:99999:7:::
 daemon:*:19106:0:99999:7:::
 bin:*:19106:0:99999:7:::
 sys:*:19106:0:99999:7:::
@@ -26,3 +26,5 @@ systemd-resolve:*:19106:0:99999:7:::
 systemd-timesync:*:19106:0:99999:7:::
 uuidd:*:19106:0:99999:7:::
 tcpdump:*:19106:0:99999:7:::
+username:!:19271:0:99999:7:::
+check:!:19271:0:99999:7:::

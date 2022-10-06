@@ -53,3 +53,5 @@ systemd-network:x:113:
 systemd-resolve:x:114:
 systemd-timesync:x:115:
 uuidd:x:116:
+tcpdump:x:117:
+username:x:1000:
