@@ -27,4 +27,5 @@ systemd-timesync:x:107:115:systemd Time Synchronization,,,:/run/systemd:/usr/sbi
 uuidd:x:108:116::/run/uuidd:/usr/sbin/nologin
 tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
 username:x:1000:1000::/home/username:/bin/bash
-check:x:1001:1001::/home/check:/bin/bash
+check:x:1001:1001:,,,:/home/check:/bin/bash
+dnsmasq:x:110:65534::/var/lib/misc:/usr/sbin/nologin
