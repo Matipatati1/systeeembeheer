@@ -58,3 +58,4 @@ username:!::
 check:!::
 docker:!::
 incron:!::
+ntp:!::

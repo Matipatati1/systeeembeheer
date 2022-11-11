@@ -30,3 +30,4 @@ username:x:1000:1000::/home/username:/bin/bash
 check:x:1001:1001:,,,:/home/check:/bin/bash
 dnsmasq:x:110:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
 ntp:x:111:120::/nonexistent:/usr/sbin/nologin
+bind:x:112:121::/var/cache/bind:/usr/sbin/nologin
