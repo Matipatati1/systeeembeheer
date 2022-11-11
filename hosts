@@ -7,3 +7,6 @@ ff02::2         ip6-allrouters
 193.191.177.187 matthias-friede.uclllabs.be matthias-friede
 
 # --- END PVE ---
+# --- BEGIN PVE ---
+193.191.177.187 matthias-friede.uclllabs.be matthias-friede
+# --- END PVE ---
