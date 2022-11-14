@@ -9,6 +9,10 @@
 zone "matthias-friede.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/db.matthias-friede.sb.uclllabs.be";
-	#allow-transfer {193.191.176.254};
+	#allow-transfer {193.191.176.254; 193.191.177.4;};
 	#also-notify {193.191.176.254};
 };
+include "/etc/bind/named.conf.mrt-zones";
+
+
+

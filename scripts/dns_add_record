@@ -1,0 +1,46 @@
+#!/bin/bash
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+
+serialw=$(sed '4q;d' /etc/bind/db.matthias-friede.sb.uclllabs.be)
+serial=$(echo "$serialw" | xargs)
+
+Name=A
+Regex='^(A|MX|CNAME)'
+
+while getopts "t:" arg; do
+  case $arg in
+    t) 
+	if [[ $OPTARG =~ $Regex ]]; then
+                Name=$OPTARG
+        else
+        	echo "error wrong arg -t"
+		exit 1
+        fi
+	;;
+  esac
+done
+
+if [ $(( $# - $OPTIND )) -lt 1 ]; then
+    echo "Usage: `basename` [options] ARG1 ARG2"
+    exit 1
+fi
+
+ARG1=${@:$OPTIND:1}
+ARG2=${@:$OPTIND+1:1}
+ARG3=${@:$OPTIND+2:1}
+
+serial=$((serial+1))
+
+sed -i "4s/.*/                  ${serial}/" /etc/bind/subzones/db.$ARG3
+
+
+if [ -z $ARG3  ]; then
+		echo "$ARG1     IN      $Name           $ARG2." >> /etc/bind/db.matthias-friede.sb.uclllabs.be #NIET sure
+else
+		echo "$ARG1      IN      $Name           $ARG2" >> /etc/bind/subzones/db.$ARG3 #juist 100%
+fi
+systemctl restart bind9
+

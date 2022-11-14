@@ -1,0 +1,39 @@
+#!/bin/bash
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+DOMAIN=matthias-friede.sb.uclllabs.be
+serialw=$(sed '4q;d' /etc/bind/db.matthias-friede.sb.uclllabs.be)
+serial=$(echo "$serialw" | xargs)
+printf "\n\nzone \"$1.$DOMAIN\" {
+        type master;
+        file \"/etc/bind/subzones/db.$1.$DOMAIN\";
+};" >> /etc/bind/named.conf.mrt-zones
+
+
+echo "; BIND data file for local loopback interfa
+\$TTL    60
+@       IN      SOA     ns.$1.matthias-friede.sb.uclllabs.be. admin.$1.matthias-friede.sb.uclllabs.be.(
+                        2               ; Serial
+                        60              ; Refresh
+                        60              ; Retry
+                        2419200         ; Expire
+                        60 )    ; Negative Cache TTL
+;
+@       IN      NS      ns.$1.matthias-friede.sb.uclllabs.be.
+@	IN	NS	ns.matthias-friede.sb.uclllabs.be.
+@	IN	NS	ns1.uclllabs.be.
+@	IN	NS	ns2.uclllabs.be.
+;
+ns      IN      A       193.191.177.187
+@	IN	A	193.191.177.187
+
+" > /etc/bind/subzones/db.$1.$DOMAIN
+
+echo "$1       IN      NS      ns.$DOMAIN." >> /etc/bind/db.matthias-friede.sb.uclllabs.be
+serial=$((serial+1))
+echo "$serial"
+sed -i "4s/.*/			${serial}/" /etc/bind/db.matthias-friede.sb.uclllabs.be
+
+systemctl reload bind9
