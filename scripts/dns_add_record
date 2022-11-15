@@ -38,7 +38,7 @@ sed -i "4s/.*/                  ${serial}/" /etc/bind/subzones/db.$ARG3
 
 
 if [ -z $ARG3  ]; then
-		echo "$ARG1     IN      $Name           $ARG2." >> /etc/bind/db.matthias-friede.sb.uclllabs.be #NIET sure
+		echo "$ARG1     IN      $Name           $ARG2" >> /etc/bind/db.matthias-friede.sb.uclllabs.be #NIET sure
 else
 		echo "$ARG1      IN      $Name           $ARG2" >> /etc/bind/subzones/db.$ARG3 #juist 100%
 fi

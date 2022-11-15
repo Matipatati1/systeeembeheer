@@ -1,0 +1,42 @@
+#!/bin/bash
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+
+ZONE=$(echo  $1 | grep -oP '.*?(?=\.)' | awk '{i++}i==2')
+R=$(echo  $1 | grep -oP '.*?(?=\.)' | awk '{i++}i==1')
+
+if grep -q $R /etc/bind/named.conf.mrt-zones
+then 
+   echo "ok";
+else
+   sudo dns_add_zone $R
+   sudo dns_add_record -t A $R 193.191.177.187
+fi
+
+mkdir /var/www/mrt/$R
+
+echo "welcome $1" > /var/www/mrt/$R/index.html
+
+echo "<VirtualHost *:80>
+
+        ServerAdmin matthias.friede@student.ucll.be
+
+        ServerName $1
+
+        ServerAlias $1
+
+        DocumentRoot /var/www/mrt/$R
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+" > /etc/apache2/sites-available/$R.conf
+
+sudo a2ensite $R.conf
+
+
+systemctl reload apache2
+
