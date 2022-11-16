@@ -1,0 +1,1 @@
+export MAIL=/var/vmail/

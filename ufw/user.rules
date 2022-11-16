@@ -44,6 +44,9 @@
 -A ufw-user-input -p tcp --dport 3306 -s 193.191.177.1 -j ACCEPT
 -A ufw-user-input -p udp --dport 3306 -s 193.191.177.1 -j ACCEPT
 
+### tuple ### allow tcp 25 0.0.0.0/0 any 0.0.0.0/0 Postfix - in
+-A ufw-user-input -p tcp --dport 25 -j ACCEPT -m comment --comment 'dapp_Postfix'
+
 ### END RULES ###
 
 ### LOGGING ###
