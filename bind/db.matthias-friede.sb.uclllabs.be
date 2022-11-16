@@ -1,7 +1,7 @@
 ; BIND data file for local loopback interfa
 $TTL    60
 @       IN      SOA     ns.matthias-friede.sb.uclllabs.be. admin.matthias-friede.sb.uclllabs.be.(
-			140
+			147
                         60              ; Refresh
                         60              ; Retry
                         2419200         ; Expire
@@ -20,9 +20,10 @@ www2    IN      A       193.191.177.187
 test    IN      A       193.191.177.254
 ns1.uclllabs.be         IN      A       193.191.176.254
 ns2.uclllabs.be         IN      A       193.191.177.4
+
 secure	IN	A	193.191.177.187
 supersecure	IN	A	193.191.177.187
-	IN	MX	mx.matthias-friede.sb.uclllabs.be.
+
 
 
 _acme-challenge.secure.matthias-friede.sb.uclllabs.be.	500	IN	TXT	"Hjxi-ddBFJ2WZYFkEhXfiBkfqU7PgJDoy_0tzv74ImE"
@@ -104,3 +105,5 @@ zeew3x     IN      A           193.191.177.187
 subzonewei1ie       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 equi5n       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 equi5n     IN      A           193.191.177.187
+subzonenie4fi       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+

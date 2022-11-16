@@ -34,13 +34,24 @@ ARG3=${@:$OPTIND+2:1}
 
 serial=$((serial+1))
 
+
+if [ $Name == "A" ];
+then
 sed -i "4s/.*/                  ${serial}/" /etc/bind/subzones/db.$ARG3
+echo "$ARG1      IN      $Name           $ARG2" >> /etc/bind/subzones/db.$ARG3  
 
+elif [ $Name == "MX" ];  
+then
+sed -i "4s/.*/                  ${serial}/" /etc/bind/subzones/db.$ARG3
+echo "$ARG1      IN      A           $ARG2" >> /etc/bind/subzones/db.$ARG3
+echo "      IN      $Name           $ARG1.$ARG3" >> /etc/bind/subzones/db.$ARG3
 
-if [ -z $ARG3  ]; then
-		echo "$ARG1     IN      $Name           $ARG2" >> /etc/bind/db.matthias-friede.sb.uclllabs.be #NIET sure
-else
-		echo "$ARG1      IN      $Name           $ARG2" >> /etc/bind/subzones/db.$ARG3 #juist 100%
+elif [ $Name == "CNAME" ];  
+then
+sed -i "4s/.*/                  ${serial}/" /etc/bind/subzones/db.matthias-friede.sb.uclllabs.be
+echo "$ARG1     IN      $Name           $ARG2." >> /etc/bind/db.matthias-friede.sb.uclllabs.be
 fi
+
+
 systemctl restart bind9
 
