@@ -33,6 +33,9 @@
 ### tuple ### allow tcp 80 0.0.0.0/0 any 0.0.0.0/0 Apache - in
 -A ufw-user-input -p tcp --dport 80 -j ACCEPT -m comment --comment 'dapp_Apache'
 
+### tuple ### allow tcp 3306 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 3306 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###
