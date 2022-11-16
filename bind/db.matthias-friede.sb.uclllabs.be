@@ -1,7 +1,7 @@
 ; BIND data file for local loopback interfa
 $TTL    60
 @       IN      SOA     ns.matthias-friede.sb.uclllabs.be. admin.matthias-friede.sb.uclllabs.be.(
-			126
+			138
                         60              ; Refresh
                         60              ; Retry
                         2419200         ; Expire
@@ -84,3 +84,21 @@ subzoneeegh6g       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 hu7thi       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 hu7thi     IN      A           193.191.177.187
 subzonehoh8sh       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonefa5aod       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+shus6w       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+shus6w     IN      A           193.191.177.187
+subzoneiu9dee       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+ba9jae       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+ba9jae     IN      A           193.191.177.187
+subzoneah1eph       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+wae4xu       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+wae4xu     IN      A           193.191.177.187
+subzoneuupuz9       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+ouri0h       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+ouri0h     IN      A           193.191.177.187
+subzoneoojoo8       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+zeew3x       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+zeew3x     IN      A           193.191.177.187
+subzonewei1ie       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+equi5n       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+equi5n     IN      A           193.191.177.187
