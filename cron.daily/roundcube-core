@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -ue
+PATH="/usr/bin:/bin"
+export PATH
+
+MAX_TMPFILE_LIFETIME=5
+if [ -r /etc/default/roundcube-core ]; then
+    # MAX_TMPFILE_LIFETIME can be overridden in this file
+    . /etc/default/roundcube-core
+fi
+
+if [ -d /var/lib/roundcube/temp ]; then
+    find /var/lib/roundcube/temp -type f -mtime +"$MAX_TMPFILE_LIFETIME" -delete
+fi
