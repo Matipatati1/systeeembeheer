@@ -6,7 +6,7 @@
 passdb {
   driver = passwd-file
  # args = scheme=CRYPT username_format=%u /etc/dovecot/users
-args = scheme=PLAIN username_format=%u /etc/dovecot/dovecot-users
+  args = scheme=PLAIN username_format=%u /etc/dovecot/dovecot-users
 }
 
 userdb {

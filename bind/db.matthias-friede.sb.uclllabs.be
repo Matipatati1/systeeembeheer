@@ -1,7 +1,7 @@
 ; BIND data file for local loopback interfa
 $TTL    60
 @       IN      SOA     ns.matthias-friede.sb.uclllabs.be. admin.matthias-friede.sb.uclllabs.be.(
-			147
+			175
                         60              ; Refresh
                         60              ; Retry
                         2419200         ; Expire
@@ -10,7 +10,7 @@ $TTL    60
 @       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be
 @       IN      NS      ns2.uclllabs.be
-@	IN	NS	ns.robbe-jacobs.sb.uclllabs.be.
+@	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 ;
 @       IN      A       193.191.177.187
 ns      IN      A       193.191.177.187
@@ -23,7 +23,7 @@ ns2.uclllabs.be         IN      A       193.191.177.4
 
 secure	IN	A	193.191.177.187
 supersecure	IN	A	193.191.177.187
-
+@	IN	MX	5	mx.matthias-friede.sb.uclllabs.be.
 
 
 _acme-challenge.secure.matthias-friede.sb.uclllabs.be.	500	IN	TXT	"Hjxi-ddBFJ2WZYFkEhXfiBkfqU7PgJDoy_0tzv74ImE"
@@ -107,3 +107,27 @@ equi5n       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 equi5n     IN      A           193.191.177.187
 subzonenie4fi       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 
+subzoneiujuc2       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+hee7ae       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzoneiephu3       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+ou0uph       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzoneguxae6       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+vie9na       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonezohj8e       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+eu8shu       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonepa9phi       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+sae5ye       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonesaem0u       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+aece9z       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonejiey0e       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+paech7       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonechae2o       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+sei9mo       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzoneeish5e       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+chiem3       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzoneaitaj9       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+yahn7a       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzoneeenga3       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+oogha6       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonewo6sha       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+shei2i       IN      NS      ns.matthias-friede.sb.uclllabs.be.
