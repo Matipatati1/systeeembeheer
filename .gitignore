@@ -4,3 +4,4 @@ bind/subzones/*
 apache2/sites-available/*
 apache2/sites-enabled/*
 incron.d/etc.conf
+letsencrypt/*

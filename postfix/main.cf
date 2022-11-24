@@ -11,9 +11,10 @@ append_dot_mydomain = no
 
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = user1@matthias-friede.sb.uclllabs.be., user2@matthias-friede.sb.uclllabs.be., check@matthias-friede.sb.uclllabs.be.
+#mydestination = user1@matthias-friede.sb.uclllabs.be., user2@matthias-friede.sb.uclllabs.be., check@matthias-friede.sb.uclllabs.be.
+mydestination = $localhost,localhost.$mydomain,localhost 
 relayhost = 
-mynetworks = 127.0.0.0/8
+mynetworks = 127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
 inet_interfaces = all
 recipient_delimiter = 
 
@@ -24,3 +25,18 @@ mailbox_size_limit = 0
 inet_protocols = all
 home_mailbox = ~/Maildir:LAYOUT=fs:DIRNAME=/var/vmail/
 virtual_alias_maps = hash:/etc/postfix/virtual
+
+
+virtual_mailbox_domains = matthias-friede.sb.uclllabs.be
+     
+virtual_mailbox_base = /var/vmail/
+      
+virtual_mailbox_maps = hash:/etc/postfix/virtual
+      
+virtual_minimum_uid = 100
+      
+virtual_uid_maps = static:5000
+      
+virtual_gid_maps = static:5000
+      
+ 
