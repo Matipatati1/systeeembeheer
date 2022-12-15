@@ -1,10 +1,12 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+#source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
 iface eth0 inet dhcp
-post-up arp -f /etc/ethers
-iface eth0 inet6 static
-        address 2001:6a8:2880:a077::BB/64
-        netmask 64
-        dns-nameservers 2001:41d0:3:163::1
-        post-up sleep 5; /sbin/ip -family inet6 route add 2001:db8:100:1ff:ff:ff:ff:ff dev eth0
-        post-up sleep 5; /sbin/ip -family inet6 route add default via 2001:db8:100:1ff:ff:ff:ff:ff
-        pre-down /sbin/ip -family inet6 route del default via 2001:db8:100:1ff:ff:ff:ff:ff
-        pre-down /sbin/ip -family inet6 route del 2001:db8:100:1ff:ff:ff:ff:ff dev eth0

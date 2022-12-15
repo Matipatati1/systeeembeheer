@@ -1,0 +1,14 @@
+[Match]
+Name=eth0
+
+[Network]
+DHCP=ipv4
+Gateway=2001:6a8:200:1ff:ff:ff:ff:ff
+DNS=2001:41d0:3:163::1
+
+[Address]
+Address=2001:6a8:2880:a077::BB/64
+Address=193.191.177.187
+[Route]
+Destination=2001:6a8:200:1ff:ff:ff:ff:ff
+Scope=link

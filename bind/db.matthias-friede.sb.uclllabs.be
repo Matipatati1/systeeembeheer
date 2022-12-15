@@ -1,7 +1,7 @@
 ; BIND data file for local loopback interfa
 $TTL    60
 @       IN      SOA     ns.matthias-friede.sb.uclllabs.be. admin.matthias-friede.sb.uclllabs.be.(
-			520
+			522
                         60              ; Refresh
                         60              ; Retry
                         2419200         ; Expire
@@ -474,3 +474,5 @@ subzonevooce2       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 moh3ib       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 subzonega5uex       IN      NS      ns.matthias-friede.sb.uclllabs.be.
 noor3u       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+subzonetoh6ru       IN      NS      ns.matthias-friede.sb.uclllabs.be.
+eiw2fa       IN      NS      ns.matthias-friede.sb.uclllabs.be.
